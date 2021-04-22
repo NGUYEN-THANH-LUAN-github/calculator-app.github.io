@@ -5,6 +5,7 @@ const operators = document.querySelectorAll('[operator]');
 const ac = document.querySelector('[clear]');
 const toggleMinus = document.querySelector('[toggle-minus]');
 const c = document.querySelector('[delete]');
+const buttons = document.querySelectorAll('button');
 const operation = {
     currentOperand: "",
     previousOperand: "",
@@ -43,6 +44,9 @@ const operation = {
         let computation;
         let a = parseFloat(this.previousOperand);
         let b = parseFloat(this.currentOperand);
+        if (this.currentOperand === "") {
+            b = parseFloat(screen.innerText);
+        }
         switch (this.operator) {
             case "+":
                 computation = a + b;
@@ -51,6 +55,11 @@ const operation = {
                 computation = a - b;
                 break;
             case "÷":
+                if (b === 0) {
+                    screen.innerText = 'Error: Divided by Zero';
+                    screen.style.cssText = "font-size: 3.3vh";
+                    return;
+                }
                 computation = a / b;
                 break;
             case "×":
@@ -58,8 +67,8 @@ const operation = {
         };
         if (computation.toString().length > 9) {
             if (computation.toString().split('.')[0].length > 9) {
-                screen.innerText = "Error";
-                this.clearAll();
+                screen.innerText = 'Error: Max Digits Exceeded';
+                screen.style.cssText = "font-size: 3.3vh";
                 return;
             }
             const decimalDigitsLength = 9 - computation.toString().split('.')[0].length;
@@ -147,3 +156,10 @@ function getDisplayLength() {
     }
     return displayLength;
 }
+window.addEventListener("keydown", (e) => {
+    buttons.forEach(button => {
+        if (button.value === e.key) {
+            button.click();
+        }
+    })
+});

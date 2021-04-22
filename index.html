@@ -12,33 +12,38 @@
 
 
 <body>
+    <div class="manual">
+        <p>(AC): Delete key || (C): Backspace key || (+/-): M key || (=): Enter key</p>
+    </div>
     <div class="container">
         <img draggable="false" src="iphone.png" alt="">
         <div class="calculator">
             <div class="screen"></div>
             <div class="buttons">
-                <button class="button grey" clear>AC</button>
-                <button class="button grey" delete>C</button>
-                <button class="button grey" toggle-minus>&#8314;&#8260;&#8331;</button>
-                <button class="button orange" operator>&#247;</button>
-                <button class="button black" num>7</button>
-                <button class="button black" num>8</button>
-                <button class="button black" num>9</button>
-                <button class="button orange" operator>&#215;</button>
-                <button class="button black" num>4</button>
-                <button class="button black" num>5</button>
-                <button class="button black" num>6</button>
-                <button class="button orange" operator>-</button>
-                <button class="button black" num>1</button>
-                <button class="button black" num>2</button>
-                <button class="button black" num>3</button>
-                <button class="button orange" operator>+</button>
-                <button class="button zero black" num>0</button>
-                <button class="button black" num>.</button>
-                <button class="button orange" equals>=</button>
+                <button class="button grey" value="Delete" clear>AC</button>
+                <button class="button grey" value="Backspace" delete>C</button>
+                <button class="button grey" value="m" toggle-minus>&#8314;&#8260;&#8331;</button>
+                <button class="button orange" value="/" operator>&#247;</button>
+                <button class="button black" value="7" num>7</button>
+                <button class="button black" value="8" num>8</button>
+                <button class="button black" value="9" num>9</button>
+                <button class="button orange" value="*" operator>&#215;</button>
+                <button class="button black" value="4" num>4</button>
+                <button class="button black" value="5" num>5</button>
+                <button class="button black" value="6" num>6</button>
+                <button class="button orange" value="-" operator>-</button>
+                <button class="button black" value="1" num>1</button>
+                <button class="button black" value="2" num>2</button>
+                <button class="button black" value="3" num>3</button>
+                <button class="button orange" value="+" operator>+</button>
+                <button class="button zero black" value="0" num>0</button>
+                <button class="button black" value="." num>.</button>
+                <button class="button orange" value="Enter" equals>=</button>
             </div>
         </div>
+
     </div>
+
     <script src="script.js"></script>
 </body>
 
