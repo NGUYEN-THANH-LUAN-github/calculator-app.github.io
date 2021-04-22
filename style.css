@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    user-select: none;
+}
+
+.container {
+    user-select: none;
+    height: 95%;
+    margin: auto;
+    position: relative;
+}
+
+img {
+    height: 100%;
+}
+
+.calculator {
+    opacity: 100%;
+    position: absolute;
+    margin: 0 7.8% 0 7.2%;
+    height: 70%;
+    width: 85.3%;
+    bottom: 10.3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.screen {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 15px;
+    text-align: right;
+    color: white;
+    font-size: 9vh;
+    width: 100%;
+    height: 22%;
+    /* word-wrap: break-word;
+    word-break: break-all; */
+}
+
+.buttons {
+    user-select: none;
+    width: 100%;
+    height: 78%;
+    padding: 3.5%;
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+    gap: 3.6%;
+}
+
+.button {
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 4vh;
+    border-radius: 50%;
+}
+
+.grey {
+    background-color: hsl(0, 0%, 63%);
+    font-size: 3.3vh;
+}
+
+.grey:hover {
+    background-color: hsl(0, 0%, 78%);
+}
+
+.grey:nth-child(3) {
+    font-weight: 550;
+}
+
+.orange {
+    background-color: hsl(39, 100%, 45%);
+    color: white;
+}
+
+.orange:hover {
+    background-color: hsl(39, 100%, 60%);
+}
+
+.black {
+    background-color: hsl(0, 1%, 21%);
+    color: white;
+}
+
+.black:hover {
+    background-color: hsl(0, 1%, 36%);
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.zero {
+    text-align: left;
+    padding-left: 2.5vh;
+    border-radius: 50px;
+    grid-column: 1/3;
+}
+
+.chosen-operator {
+    background-color: white;
+    color: hsl(39, 100%, 60%);
+}
+
+.chosen-operator:hover {
+    background-color: white;
+    color: hsl(39, 100%, 60%);
+}
+
+@media (min-width: 550px) {
+    .container {
+        height: 80%;
+    }
+}
